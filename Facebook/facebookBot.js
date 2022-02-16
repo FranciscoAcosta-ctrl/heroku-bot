@@ -525,7 +525,7 @@ async function receivedPostback(event) {
   }
 
   console.log(
-    "Received postback for user %d and page %d with payload '%s' " + "at %d",
+    "Recibio un postback por %d y page %d con payload '%s' " + "at %d",
     senderId,
     recipientID,
     payload,
