@@ -152,7 +152,9 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
-  
+    case "prueba.quickReply": 
+    
+    break;
     default:
       //unhandled action, just send back the text
       handleMessages(messages, sender);
