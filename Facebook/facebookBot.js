@@ -119,7 +119,7 @@ async function receivedMessage(event) {
 
 function handleMessageAttachments(messageAttachments, senderId) {
   //for now just reply
-  sendTextMessage(senderId, "Archivo adjunto recibido... gracias! .");
+  sendTextMessage(senderId, "Bot en funcion... gracias! .");
 }
 
 async function setSessionAndUser(senderId) {
