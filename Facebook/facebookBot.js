@@ -152,16 +152,7 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
-    case "prueba.quickReply.action": 
-      sendQuickReply(sender, "Ejemplo quick",[
-        {
-        content_type: "text",
-        payload: "ubicacion",
-        image_url: "https://cdn.icon-icons.com/icons2/2444/PNG/512/location_map_pin_mark_icon_148685.png",
-        title: "Ubicacion"
-        }
-      ])    
-    break;
+   
     default:
       //unhandled action, just send back the text
       handleMessages(messages, sender);
