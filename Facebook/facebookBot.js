@@ -139,7 +139,6 @@ async function handleQuickReply(senderId, quickReply, messageId) {
     messageId,
     quickReplyPayload
   );
-  this.elements = a;
   // send payload to api.ai
   sendToDialogFlow(senderId, quickReplyPayload);
 }
