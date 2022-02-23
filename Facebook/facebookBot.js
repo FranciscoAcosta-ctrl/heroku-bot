@@ -152,6 +152,28 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
+    case "Codigo.quickReply.action":
+
+      sendQuickReply(sender, "Ejemplo De quickReply",[
+      {
+        content_type:"text",
+        title:"Ver Menu",
+        payload:"Ver Menu",
+        image_url:"https://img2.freepng.es/20201021/yab/transparent-fast-food-icon-menu-icon-5f907761e416a8.1001417516033032659343.jpg"
+      },{
+        content_type:"text",
+        title:"Ver Ubicacion",
+        payload:"Ver Ubicacion",
+        image_url:"https://cdn.icon-icons.com/icons2/2444/PNG/512/location_map_pin_mark_icon_148685.png"
+      },{
+        content_type:"text",
+        title:"Soporte",
+        payload:"Soporte",
+        image_url:"https://png.pngtree.com/png-vector/20190214/ourlarge/pngtree-customer-support-icon-graphic-design-template-vector-png-image_384606.jpg"
+      }
+      ]);
+
+      break;
     default:
       //unhandled action, just send back the text
       handleMessages(messages, sender);
