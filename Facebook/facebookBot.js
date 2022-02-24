@@ -125,10 +125,10 @@ async function receivedMessage(event) {
 async function saveUserData(senderId) {
   let userData = await getUserData(senderId);
   let chatbotUser = new ChatbotUser({
-    firstName : userData.firstName,
-    lastName: userData.lastName,
+    firstName : userData.first_name,
+    lastName: userData.last_name,
     facebookId: senderId,
-    profilePic: userData.profilePic,
+    profilePic: userData.profile_pic,
   });
   chatbotUser.save((err,res)=>{
     if(err) return console.log(err);
