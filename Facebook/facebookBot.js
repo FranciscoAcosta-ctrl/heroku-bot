@@ -9,6 +9,9 @@ const config = require("../config");
 const dialogflow = require("../dialogflow");
 const { structProtoToJson } = require("./helpers/structFunctions");
 
+//Mongodb models
+const ChatbotUser = require('../Models/chatbotUsers');
+
 // Messenger API parameters
 if (!config.FB_PAGE_TOKEN) {
   throw new Error("missing FB_PAGE_TOKEN");
@@ -108,6 +111,8 @@ async function receivedMessage(event) {
     handleQuickReply(senderId, quickReply, messageId);
     return;
   }
+  saveUserData(senderId);
+
   if (messageText) {
     //send message to dialogflow
     console.log("MENSAJE DEL USUARIO: ", messageText);
@@ -115,6 +120,19 @@ async function receivedMessage(event) {
   } else if (messageAttachments) {
     handleMessageAttachments(messageAttachments, senderId);
   }
+}
+
+function saveUserData(senderId) {
+  let chatbotUser = new ChatbotUser({
+    firstName : "",
+    lastName: "",
+    facebookId: senderId,
+    profilePic: "",
+  });
+  ChatbotUser.save((err,res)=>{
+    if(err) return console.log(err);
+    console.log("Se agrego un usuario:",res);
+  })
 }
 
 function handleMessageAttachments(messageAttachments, senderId) {
@@ -152,7 +170,7 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
-    
+
     case "Codigo.quickReply.action":
 
       sendQuickReply(sender, "Ejemplo De quickReply",[
