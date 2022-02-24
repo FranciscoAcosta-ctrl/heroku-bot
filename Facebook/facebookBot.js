@@ -129,9 +129,9 @@ function saveUserData(senderId) {
     facebookId: senderId,
     profilePic: "",
   });
-  ChatbotUser.save((err,res)=>{
+  chatbotUser.save((err,res)=>{
     if(err) return console.log(err);
-    console.log("Se agrego un usuario:",res);
+    console.log("Se agrego un usuario:", res);
   })
 }
 
