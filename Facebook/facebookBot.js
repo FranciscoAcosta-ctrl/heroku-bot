@@ -139,6 +139,7 @@ async function handleQuickReply(senderId, quickReply, messageId) {
     messageId,
     quickReplyPayload
   );
+  //this.elements = a;
   // send payload to api.ai
   sendToDialogFlow(senderId, quickReplyPayload);
 }
@@ -151,6 +152,7 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
+    
     case "Codigo.quickReply.action":
 
       sendQuickReply(sender, "Ejemplo De quickReply",[
@@ -173,6 +175,7 @@ async function handleDialogFlowAction(
       ]);
 
       break;
+
     default:
       //unhandled action, just send back the text
       handleMessages(messages, sender);

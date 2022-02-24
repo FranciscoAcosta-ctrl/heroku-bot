@@ -1,6 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+// Using Node.js `require()`
+const mongoose = require('mongoose');
 
 const port = process.env.PORT || 3000;
 
@@ -17,6 +19,12 @@ app.use(
     limit: "20mb",
   })
 );
+ mongoose.connect('mongodb+srv://Francisco:stopshacopliss@cluster0.gvy94.mongodb.net/chatbotDB?retryWrites=true&w=majority',{},(err,resp)=>{
+   if (err) {
+     return console.log("Hay un error en la base de datos", err);
+   }else
+   console.log("Base da datos online");
+ });
 
 app.use("/messenger", require("./Facebook/facebookBot"));
 
