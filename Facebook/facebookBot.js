@@ -121,7 +121,7 @@ async function receivedMessage(event) {
     handleMessageAttachments(messageAttachments, senderId);
   }
 }
-
+//Agregar Datos del Usuario
 async function saveUserData(senderId) {
   let userData = await getUserData(senderId);
   let chatbotUser = new ChatbotUser({
