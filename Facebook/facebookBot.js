@@ -176,40 +176,40 @@ async function handleDialogFlowAction(
 
       sendGenericMessage(sender,[
         {
-          "subtitle": "Tipos de empanadas",
-          "title": "Empanadas",
-          "image_url": "https://elchedelbarrio.com/imgs/test/001.jpg",
-          "buttons": [
+          subtitle: "Tipos de empanadas",
+          title: "Empanadas",
+          image_url: "https://elchedelbarrio.com/imgs/test/001.jpg",
+          buttons: [
             {
-              "title": "Iniciar Pedido",
-              "type": "postback",
-              "payload": "Iniciar Pedido"
+              title: "Iniciar Pedido",
+              type: "postback",
+              payload: "Iniciar Pedido"
             }
           ]
         },
         {
-          "image_url": "https://elchedelbarrio.com/imgs/test/002.jpg",
-          "title": "Cortes",
-          "buttons": [
+          image_url: "https://elchedelbarrio.com/imgs/test/002.jpg",
+          title: "Cortes",
+          buttons: [
             {
-              "title": "Iniciar Pedido",
-              "type": "postback",
-              "payload": "Iniciar Pedido"
+              title: "Iniciar Pedido",
+              type: "postback",
+              payload: "Iniciar Pedido"
             }
           ],
-          "subtitle": "Tipos de cortes"
+          subtitle: "Tipos de cortes"
         },
         {
-          "title": "Con Pan",
-          "buttons": [
+          title: "Con Pan",
+          buttons: [
             {
-              "payload": "Iniciar Pedido",
-              "title": "Iniciar Pedido",
-              "type": "postback"
+              payload: "Iniciar Pedido",
+              title: "Iniciar Pedido",
+              type: "postback"
             }
           ],
-          "image_url": "https://elchedelbarrio.com/imgs/test/003.jpg",
-          "subtitle": "Tipos con pan"
+          image_url: "https://elchedelbarrio.com/imgs/test/003.jpg",
+          subtitle: "Tipos con pan"
         }
       ]);
 
