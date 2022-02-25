@@ -1,6 +1,6 @@
 module.exports = {
   //Facebook App credentials
-  FB_PAGE_TOKEN: "EAAFD2Qx2LfsBAJZCdEbB0jb49xqZBqgLm8qxNV68dgsZAiu1vKk1DjYhEv9JwyZAZCDIz0v7bjh7WKmRa6aLTHF1CscPUw867jesd7ZCsP7HlyKmcQi00UNEjUfZC7sPqTzmrGivCFvw1O8a0FdZBClpRucC8TTBSej7DLYcd7niuO8W0ofauu4J",
+  FB_PAGE_TOKEN: "EAAFD2Qx2LfsBAH4QArmqjCVW0RgpuMWlcA0pPIeYdY9ZCfIRxtjJ2JcPIf1GD7a3eiQSwhlPbTjfwnGGZBP3yZBZA7cTIlZCn7foYedXk6nVVqMPhLDQHjYbZC0QBcO5flzSaCcHS7TfZCLGXtyxZBRcYFIdOpgVmqgkcaQG098kTUDL4AOIXJiP",
   FB_VERIFY_TOKEN: "elchedelbarriotoken",
   FB_APP_SECRET: "365ac766fa3a793059c356ed9202d042",
   //Google project credentials
