@@ -19,7 +19,7 @@ app.use(
     limit: "20mb",
   })
 );
- mongoose.connect('mongodb+srv://Francisco:stopshacopliss@cluster0.gvy94.mongodb.net/chatbotDB?retryWrites=true&w=majority',{},(err,resp)=>{
+ mongoose.connect('mongodb+srv://Francisco:elchedelbarriotokenvalidation@cluster0.gvy94.mongodb.net/chatbotDB?retryWrites=true&w=majority',{},(err,resp)=>{
    if (err) {
      return console.log("Hay un error en la base de datos", err);
    }else
