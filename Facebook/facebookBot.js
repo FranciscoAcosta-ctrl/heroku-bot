@@ -174,28 +174,43 @@ async function handleDialogFlowAction(
 
     case "Codigo.quickReply.action":
 
-      sendQuickReply(sender, "Ejemplo De quickReply",[
-      {
-        content_type:"text",
-        title:"Ver Menu",
-        payload:"Ver Menu",
-        image_url:"https://img2.freepng.es/20201021/yab/transparent-fast-food-icon-menu-icon-5f907761e416a8.1001417516033032659343.jpg"
-      },{
-        content_type:"text",
-        title:"Iniciar Pedido",
-        payload:"Iniciar Pedido",
-        image_url:"https://img2.freepng.es/20180701/soe/kisspng-computer-icons-online-shopping-shopping-cart-servi-shopping-cart-icon-5b38fd8875d0a8.3459493915304615764826.jpg"
-      },{
-        content_type:"text",
-        title:"Ver Ubicacion",
-        payload:"Ver Ubicacion",
-        image_url:"https://cdn.icon-icons.com/icons2/2444/PNG/512/location_map_pin_mark_icon_148685.png"
-      },{
-        content_type:"text",
-        title:"Soporte",
-        payload:"Soporte",
-        image_url:"https://www.pngfind.com/pngs/m/243-2439504_customer-support-icon-technical-support-hd-png-download.png"
-      }
+      sendGenericMessage(sender,[
+        {
+          "subtitle": "Tipos de empanadas",
+          "title": "Empanadas",
+          "image_url": "https://elchedelbarrio.com/imgs/test/001.jpg",
+          "buttons": [
+            {
+              "title": "Iniciar Pedido",
+              "type": "postback",
+              "payload": "Iniciar Pedido"
+            }
+          ]
+        },
+        {
+          "image_url": "https://elchedelbarrio.com/imgs/test/002.jpg",
+          "title": "Cortes",
+          "buttons": [
+            {
+              "title": "Iniciar Pedido",
+              "type": "postback",
+              "payload": "Iniciar Pedido"
+            }
+          ],
+          "subtitle": "Tipos de cortes"
+        },
+        {
+          "title": "Con Pan",
+          "buttons": [
+            {
+              "payload": "Iniciar Pedido",
+              "title": "Iniciar Pedido",
+              "type": "postback"
+            }
+          ],
+          "image_url": "https://elchedelbarrio.com/imgs/test/003.jpg",
+          "subtitle": "Tipos con pan"
+        }
       ]);
 
       break;
