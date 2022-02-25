@@ -1,0 +1,75 @@
+<div class="container">
+
+    <div class="card mb-3" style="width: 18rem;">
+  <img src="https://elchedelbarrio.com/imgs/test/001.jpg" class="card-img-top img-fluid" style="height: 100px;object-fit: cover;" >
+  <div class="card-body">
+    <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+      Empanadas de Carne
+    <span class="badge">
+        <input type='text' id="cantidad" value="0">
+        <button class="btn btn-danger btn-lg" id='disminuir' onclick="disminuir()" style="display: none; float:left">-</button>
+        <button class="btn btn-success btn-lg" id='aumentar' onclick="aumentar()">+</button>
+    </span>
+  </li>
+</ul>
+  </div>
+</div>
+
+
+<div class="d-grid gap-2" style="width: 18rem;">
+<button id="btnComprar" onclick="pagar()" class="ms-2 btn btn-secondary">Comprar</button>
+</div>
+
+</div>
+
+
+<style>
+    #cantidad{
+        border: 0.5px solid #ccc;
+        border-radius: 24px;
+        width: 50px;
+    }
+    #disminuir, #aumentar{
+        width: 20px;height:20px; padding: 0px; margin: 0px; font-size:10px; border-radius: 24px;
+    }
+    #disminuir{
+        margin: 1px;
+    }
+</style>
+
+
+
+<Script>
+const btnMenos = document.getElementById('disminuir');
+function displayBtn(cantidad){
+    if( cantidad <= 0){
+        btnMenos.style.display = "none";
+    }else{
+        btnMenos.style.display = "";
+    }
+}
+
+
+
+var inicio = 0; //se inicializa una variable en 0
+
+function aumentar(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
+
+var cantidad = document.getElementById('cantidad').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
+displayBtn(cantidad);
+}
+
+function disminuir(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+
+var cantidad = document.getElementById('cantidad').value = --inicio; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+displayBtn(cantidad);
+}
+
+
+function pagar(){
+    var cantidad = document.getElementById('cantidad').value;
+    console.log("Comprar : "+cantidad+" empanadas")
+    cantidad = 0;
+}
+</Script>

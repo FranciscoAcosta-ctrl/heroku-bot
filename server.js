@@ -1,8 +1,18 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+
+const { engine } = require("express-handlebars");
 // Using Node.js `require()`
 const mongoose = require('mongoose');
+
+
+app.engine('.hbs', 
+engine({
+  extname:".hbs",
+}));
+app.set('view engine', '.hbs');
+app.set('views', './views');
 
 const port = process.env.PORT || 3000;
 
@@ -28,9 +38,12 @@ app.use(
 
 app.use("/messenger", require("./Facebook/facebookBot"));
 
+app.use("/",require("./routes/routes"));
+
 app.get("/", (req, res) => {
   return res.send("Chatbot Funcionando 🤖🤖🤖");
 });
+
 
 app.listen(port, () => {
   console.log(`Escuchando peticiones en el puerto ${port}`);

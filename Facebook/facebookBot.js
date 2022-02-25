@@ -188,7 +188,7 @@ async function handleDialogFlowAction(
           ]
         },
         {
-          image_url: "https://elchedelbarrio.com/imgs/test/002.jpg",
+          image_url: "https://elchedelbarrio.com/imgs/boxes/individual.jpg",
           title: "Cortes",
           buttons: [
             {
